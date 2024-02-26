@@ -2,28 +2,27 @@
 
     <section class="quizz_logo">
         <img src="../../../assets/images/logo.png" alt="Buzz Feed">
-        <h3>Titulo</h3>
+        <h3>{{title}}</h3>
     </section>
 
-    <section class="quizz_questions">
-        <h3>Questão Selecionada</h3>
+    <section *ngIf="!finished" class="quizz_questions">
+        <h3>{{questionSelected.question}}</h3>
     </section>
 
-    <section class="quizz_options">
-        <button class="btn-option">
-            Opção
-        </button>
-        <button class="btn-option">
-            Opção
-        </button>
-        <button class="btn-option">
-            Opção
+    <section *ngIf="!finished" class="quizz_options">
+        <button 
+        *ngFor="let option of questionSelected.options"
+        (click)="buttonChoice(option.alias)" 
+        class="btn-option"
+        
+        >
+            {{option.name}}
         </button>
     </section>
 
-    <section class="quizz_results">
+    <section *ngIf='finished' class="quizz_results">
         <h1>O seu Resultado é: </h1>
-        <p>Resposta Selecionada</p>
+        <p>{{ answersSelected }}</p>
     </section>
 
 </article>
