@@ -1,0 +1,121 @@
+.quizz__container{
+    width: 90%;
+
+    margin: 30px auto;
+}
+
+.quizz__container > .quizz_logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 10px;
+}
+
+.quizz__container > .quizz_logo img{
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+.quizz__container .quizz_questions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 80px;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+    border: 1px solid #4224d9;
+    background-color: #654ED2;
+}
+
+.quizz__container > .quizz_options{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.quizz__container > .quizz_options .btn-option {
+    display: inline-block;
+
+    width: 100%;
+    height: 50px;
+
+    margin: 2.5%;
+    border-radius: 8px;
+    border: 1px solid #18ab28;
+    background-color: transparent;
+    cursor: pointer;
+    
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.quizz__container > .quizz_options .btn-option:hover {
+    background-color: #5cbf2a;
+}
+
+.quizz__container > .quizz_options .btn-option:active {
+    position: relative;
+    top: -1px;
+}
+
+.quizz__container > .quizz_results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    height: 350px;
+    background-color: #1F0539;
+}
+
+
+/* MEDIA QUERRY */
+
+/* TABLETS */
+@media (min-width: 768px) {
+    .quizz__container > .quizz_logo {
+        font-size: 1.4rem;
+    }
+    .quizz__container > .quizz_logo img{
+        width: 450px;
+    }
+    .quizz__container .quizz_questions{
+        font-size: 1.2rem;
+        height: 100px;
+    }
+    .quizz__container > .quizz_options .btn-option {
+        width: 45%;
+        height: 60px;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    
+    .quizz__container > .quizz_options .btn-option:hover {
+        background-color: #5cbf2a;
+    }
+
+    .quizz__container > .quizz_results {
+        font-size: 1.4rem;
+    }
+}
+
+/* LAPTOPS */
+@media (min-width: 1024px) {
+    .quizz__container > .quizz_logo img{
+        width: 550px;
+    }
+    .quizz__container > .quizz_options .btn-option {
+        width: 32%;
+        margin: .5%;
+
+    }
+}
+
+/* DESKTOPS */
+@media (min-width: 1200px) {
+
+}
